@@ -22,7 +22,8 @@ namespace agr
 
             var container = builder.Build();
 
-            // if you coment out the above autofac configuration this will succeed compile and run-time.
+            // if you comment out the above autofac configuration this will succeed compile and run-time.
+            // why does c# have no problems converting TableScript to IScript<T> and Script<T> but autofac is complaining?
             TestInterface(new TableScript());
             TestAbstractBase(new TableScript());
 
