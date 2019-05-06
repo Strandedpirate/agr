@@ -9,6 +9,7 @@ namespace agr
         {
             var builder = new ContainerBuilder();
 
+            // comment out the next registrations to see the program run.
             builder.RegisterType<TableScript>()
               .As<Script<TableScriptOptions>>()
               .InstancePerLifetimeScope();
@@ -21,6 +22,7 @@ namespace agr
 
             var container = builder.Build();
 
+            // if you coment out the above autofac configuration this will succeed compile and run-time.
             TestInterface(new TableScript());
             TestAbstractBase(new TableScript());
 
